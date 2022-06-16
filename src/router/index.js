@@ -5,11 +5,9 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
+    path: "/disinsection",
     name: "Main",
-
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/MainView"),
+    component: () => import("../views/DisinsectionView"),
   },
 ];
 

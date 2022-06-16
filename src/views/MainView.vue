@@ -1,16 +1,13 @@
 <template>
-  <div style="background-color: red">
-    <br>
-    <h4>asd</h4>
+  <div>
+    asd
   </div>
 </template>
 
 <script>
 export default {
-  name: "MainView"
-}
+  name: "MainView",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
