@@ -2,7 +2,6 @@
   <v-app>
     <nav-menu></nav-menu>
     <v-main class="d-flex justify-center">
-      <h1>TEST</h1>
       <v-container>
         <router-view />
       </v-container>
