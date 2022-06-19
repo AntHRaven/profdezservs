@@ -1,13 +1,10 @@
 <template>
   <v-app>
     <nav-menu></nav-menu>
-
     <v-main class="d-flex justify-center">
-      <v-content>
-        <v-container>
-          <router-view />
-        </v-container>
-      </v-content>
+      <v-container>
+        <router-view />
+      </v-container>
     </v-main>
   </v-app>
 </template>
@@ -24,6 +21,10 @@ export default {
 </script>
 
 <style>
+.navigation {
+  width: 20vw;
+}
+
 .notice {
   background: #f3f6f7;
   position: relative;

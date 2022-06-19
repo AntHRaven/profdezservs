@@ -44,7 +44,7 @@
       своевременно обращаться в СЭС.
     </p>
 
-    <img src="../assets/firstImage.jpg" alt="" />
+    <img src="src/assets/firstImage.jpg" alt="" />
 
     <h3>ЦЕНЫ НА ДЕЗИНСЕКЦИЮ НАСЕКОМЫХ</h3>
     <div class="notice">

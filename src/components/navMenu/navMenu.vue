@@ -17,11 +17,11 @@
           <v-tabs-slider></v-tabs-slider>
 
           <v-tab
-            @click="setTab(index, item.link)"
-            v-for="(item, index) in items"
+            @click="setTab(index, item.path)"
+            v-for="(item, index) in routes"
             :key="index"
           >
-            {{ item.label }}
+            {{ item.meta.title }}
           </v-tab>
         </v-tabs>
       </template>
@@ -30,9 +30,9 @@
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
         <v-list-item-group>
-          <v-list-item :key="index" v-for="(item, index) in items">
-            <v-list-item-title @click="setTab(index, item.link)">
-              {{ item.label }}
+          <v-list-item :key="index" v-for="(item, index) in routes">
+            <v-list-item-title @click="setTab(index, item.path)">
+              {{ item.meta.title }}
             </v-list-item-title>
           </v-list-item>
         </v-list-item-group>
@@ -49,30 +49,25 @@ export default {
   data() {
     return {
       drawer: false,
-      items: [
-        { label: "Дезинсекция", link: "disinsection" },
-        { label: "Дератизация", link: "deratization" },
-        { label: "Дезинфекция", link: "disinfection" },
-        { label: "Фумигация", link: "fumigation" },
-        { label: "Демеркуризация", link: "demercurization" },
-        { label: "Цены", link: "price" },
-        { label: "О нас", link: "about-us" },
-        { label: "Контакты", link: "/contacts" },
-      ],
     };
   },
 
   computed: {
     ...mapGetters({
       tab: "GETACTIVETAB",
+      routes: "GETROUTES",
     }),
+
+    tab: {
+      set(value) {
+        this.$store.dispatch("setActiveTab", value);
+      },
+    },
   },
 
   methods: {
     setTab(index, link) {
-      console.log("test");
-      this.tab = index;
-      this.$router.push("/" + link);
+      this.$router.push("" + link);
     },
   },
 };
