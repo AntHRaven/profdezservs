@@ -18,7 +18,7 @@
 
           <v-tab
             @click="setTab(index, item.path)"
-            v-for="(item, index) in routes"
+            v-for="(item, index) in visibleRoots"
             :key="index"
           >
             {{ item.meta.title }}
@@ -30,7 +30,7 @@
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
         <v-list-item-group>
-          <v-list-item :key="index" v-for="(item, index) in routes">
+          <v-list-item :key="index" v-for="(item, index) in visibleRoots">
             <v-list-item-title @click="setTab(index, item.path)">
               {{ item.meta.title }}
             </v-list-item-title>
@@ -57,6 +57,12 @@ export default {
       tab: "GETACTIVETAB",
       routes: "GETROUTES",
     }),
+
+    visibleRoots: {
+      get() {
+        return this.routes.filter((item) => !item.hidden);
+      },
+    },
 
     tab: {
       set(value) {

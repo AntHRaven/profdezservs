@@ -8,8 +8,12 @@ const routes = [
     path: "/disinsection",
     name: "disinsection",
     meta: {
-      title: "Дезинсекция",
+      service: true,
+      image: require("@/assets/firstImage.jpg"),
+      show: false,
+      title: "Уничтожение насекомых",
     },
+    hidden: true,
     component: () => import("../views/viewRouter"),
     children: [
       {
@@ -140,8 +144,12 @@ const routes = [
     path: "/deratization",
     name: "deratization",
     meta: {
-      title: "Дератизация",
+      title: "Уничтожение грызунов",
+      service: true,
+      show: false,
+      image: require("@/assets/firstImage.jpg"),
     },
+    hidden: true,
     component: () => import("../views/disinsection/DisinsectionView"),
     children: [
       {
@@ -155,11 +163,15 @@ const routes = [
   },
 
   {
-    path: "/disinfection",
-    name: "disinfection",
+    path: "/unichtozhenie-sadovyh-vreditelej",
+    name: "unichtozhenieSadovyhVreditelej",
     meta: {
-      title: "Дезинфекция",
+      service: true,
+      image: require("@/assets/firstImage.jpg"),
+      show: false,
+      title: "Уничтожение садовых вредителей",
     },
+    hidden: true,
     component: () => import("../views/disinsection/DisinsectionView"),
     children: [
       {
@@ -172,28 +184,15 @@ const routes = [
   },
 
   {
-    path: "/fumigation",
-    name: "fumigation",
+    path: "/other-services",
+    name: "otherServices",
     meta: {
-      title: "Фумигация",
+      service: true,
+      image: require("@/assets/firstImage.jpg"),
+      show: false,
+      title: "Другие услуги",
     },
-    component: () => import("../views/disinsection/DisinsectionView"),
-    children: [
-      {
-        path: "",
-        meta: {
-          title: "",
-        },
-      },
-    ],
-  },
-
-  {
-    path: "/demercurization",
-    name: "demercurization",
-    meta: {
-      title: "Демеркуризация",
-    },
+    hidden: true,
     component: () => import("../views/disinsection/DisinsectionView"),
     children: [
       {
@@ -255,6 +254,15 @@ const routes = [
         // component: () => import(""),
       },
     ],
+  },
+
+  {
+    path: "/services",
+    name: "services",
+    meta: {
+      title: "Услуги",
+    },
+    component: () => import("../views/services/ListServicesView"),
   },
 ];
 
