@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card class="mr-2 mb-2">
+    <v-card max-width="365px" outlined class="mr-2 mb-2">
       <v-img
         :src="service.meta.image"
         class="white--text align-end"
@@ -30,10 +30,10 @@
 
           <v-card-text>
             <div :key="subService.path" v-for="subService in service.children">
-              <v-btn text>
+              <v-btn @click="toSubService(subService)" text>
                 {{ subService.meta.title }}
               </v-btn>
-              <br>
+              <br />
             </div>
           </v-card-text>
         </div>
@@ -46,6 +46,11 @@
 export default {
   name: "serviceCard",
   props: ["service"],
+  methods: {
+    toSubService(service) {
+      this.$router.push("/" + service.meta.parent + "/" + service.path);
+    }
+  }
 };
 </script>
 

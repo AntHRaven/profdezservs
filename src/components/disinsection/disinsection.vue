@@ -55,26 +55,26 @@
       </p>
     </div>
 
-    <v-expansion-panels>
-      <v-expansion-panel>
-        <v-expansion-panel-header>
-          ОБРАБОТКА ОТ КЛОПОВ, ТАРАКАНОВ, БЛОХ И ДРУГИХ НАСЕКОМЫХ В ПОМЕЩЕНИЯХ
-        </v-expansion-panel-header>
-        <v-expansion-panel-content>
-          <v-data-table
-            :headers="headers"
-            :items="prices"
-            item-key="name"
-            sort-by="name"
-            group-by="type"
-            class="elevation-1"
-            show-group-by
-            hide-default-footer
-            :items-per-page="20"
-          ></v-data-table>
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-    </v-expansion-panels>
+<!--    <v-expansion-panels>-->
+<!--      <v-expansion-panel>-->
+<!--        <v-expansion-panel-header>-->
+<!--          ОБРАБОТКА ОТ КЛОПОВ, ТАРАКАНОВ, БЛОХ И ДРУГИХ НАСЕКОМЫХ В ПОМЕЩЕНИЯХ-->
+<!--        </v-expansion-panel-header>-->
+<!--        <v-expansion-panel-content>-->
+<!--          <v-data-table-->
+<!--            :headers="headers"-->
+<!--            :items="prices"-->
+<!--            item-key="name"-->
+<!--            sort-by="name"-->
+<!--            group-by="type"-->
+<!--            class="elevation-1"-->
+<!--            show-group-by-->
+<!--            hide-default-footer-->
+<!--            :items-per-page="20"-->
+<!--          ></v-data-table>-->
+<!--        </v-expansion-panel-content>-->
+<!--      </v-expansion-panel>-->
+<!--    </v-expansion-panels>-->
     <br />
     <br />
     <h3>
@@ -276,126 +276,6 @@
 <script>
 export default {
   name: "disinsection",
-  data() {
-    return {
-      headers: [
-        {
-          text: "Наименование услуги",
-          align: "start",
-          value: "name",
-          groupable: false,
-        },
-        { text: "Вид работ", value: "type", align: "right" },
-        { text: "Стоимость", value: "price", align: "right" },
-      ],
-      prices: [
-        {
-          name: "1_я квартира",
-          type: "ХОЛОДНЫЙ ТУМАН",
-          price: "2 000 руб",
-        },
-        {
-          name: "2_х комнат",
-          type: "ХОЛОДНЫЙ ТУМАН",
-          price: "2 500 руб",
-        },
-        {
-          name: "4_х комнатная квартира",
-          type: "ХОЛОДНЫЙ ТУМАН",
-          price: "3 000 руб",
-        },
-        {
-          name: "*МОП (кухня, коридор, санузел)",
-          type: "ХОЛОДНЫЙ ТУМАН",
-          price: "3 500 руб",
-        },
-
-        {
-          name: "1_я квартира",
-          type: "ULV + БАРЬЕР",
-          price: "2 000 руб",
-        },
-        {
-          name: "2_х комнат",
-          type: "ULV + БАРЬЕР",
-          price: "2 500 руб",
-        },
-        {
-          name: "4_х комнатная квартира",
-          type: "ULV + БАРЬЕР",
-          price: "3 000 руб",
-        },
-        {
-          name: "*МОП (кухня, коридор, санузел)",
-          type: "ULV + БАРЬЕР",
-          price: "3 500 руб",
-        },
-
-        {
-          name: "1_я квартира",
-          type: "ГОРЯЧИЙ ТУМАН (GAP ОБРАБОТКА)",
-          price: "2 000 руб",
-        },
-        {
-          name: "2_х комнат",
-          type: "ГОРЯЧИЙ ТУМАН (GAP ОБРАБОТКА)",
-          price: "2 500 руб",
-        },
-        {
-          name: "4_х комнатная квартира",
-          type: "ГОРЯЧИЙ ТУМАН (GAP ОБРАБОТКА)",
-          price: "3 000 руб",
-        },
-        {
-          name: "*МОП (кухня, коридор, санузел)",
-          type: "ГОРЯЧИЙ ТУМАН (GAP ОБРАБОТКА)",
-          price: "3 500 руб",
-        },
-
-        {
-          name: "1_я квартира",
-          type: "КОМПЛЕКСНАЯ ОБРАБОТКА GAP И ULV, БАРЬЕР В ПОДАРОК",
-          price: "2 000 руб",
-        },
-        {
-          name: "2_х комнат",
-          type: "КОМПЛЕКСНАЯ ОБРАБОТКА GAP И ULV, БАРЬЕР В ПОДАРОК",
-          price: "2 500 руб",
-        },
-        {
-          name: "4_х комнатная квартира",
-          type: "КОМПЛЕКСНАЯ ОБРАБОТКА GAP И ULV, БАРЬЕР В ПОДАРОК",
-          price: "3 000 руб",
-        },
-        {
-          name: "*МОП (кухня, коридор, санузел)",
-          type: "КОМПЛЕКСНАЯ ОБРАБОТКА GAP И ULV, БАРЬЕР В ПОДАРОК",
-          price: "3 500 руб",
-        },
-
-        {
-          name: "1_я квартира",
-          type: "КОМПЛЕКСНАЯ ОБРАБОТКА GAP + ULV, БАРЬЕР В ПОДАРОК + ИЗ (ИНДИВИДУАЛЬНАЯ ЗАЩИТА ДЫХАТЕЛЬНЫХ ПУТЕЙ)",
-          price: "2 000 руб",
-        },
-        {
-          name: "2_х комнат",
-          type: "КОМПЛЕКСНАЯ ОБРАБОТКА GAP + ULV, БАРЬЕР В ПОДАРОК + ИЗ (ИНДИВИДУАЛЬНАЯ ЗАЩИТА ДЫХАТЕЛЬНЫХ ПУТЕЙ)",
-          price: "2 500 руб",
-        },
-        {
-          name: "4_х комнатная квартира",
-          type: "КОМПЛЕКСНАЯ ОБРАБОТКА GAP + ULV, БАРЬЕР В ПОДАРОК + ИЗ (ИНДИВИДУАЛЬНАЯ ЗАЩИТА ДЫХАТЕЛЬНЫХ ПУТЕЙ)",
-          price: "3 000 руб",
-        },
-        {
-          name: "*МОП (кухня, коридор, санузел)",
-          type: "КОМПЛЕКСНАЯ ОБРАБОТКА GAP + ULV, БАРЬЕР В ПОДАРОК + ИЗ (ИНДИВИДУАЛЬНАЯ ЗАЩИТА ДЫХАТЕЛЬНЫХ ПУТЕЙ)",
-          price: "3 500 руб",
-        },
-      ],
-    };
-  },
 };
 </script>
 
