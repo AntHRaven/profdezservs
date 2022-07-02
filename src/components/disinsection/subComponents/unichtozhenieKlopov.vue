@@ -132,7 +132,7 @@
 import Prices from "@/components/general/prices";
 export default {
   name: "unichtozhenieKlopov",
-  components: {Prices},
+  components: { Prices },
   data() {
     return {
       prices: [

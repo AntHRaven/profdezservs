@@ -36,6 +36,16 @@ const routes = [
           import("../views/disinsection/subViews/UnichtozhenieKleshchejView"),
       },
       {
+        path: "unichtozhenie-komarov",
+        name: "unichtozhenie-komarov",
+        meta: {
+          parent: "disinsection",
+          title: "Уничтожение комаров",
+        },
+        component: () =>
+          import("../views/disinsection/subViews/UnichtozhenieKomarovView"),
+      },
+      {
         path: "unichtozhenie-klopov",
         name: "unichtozhenie-klopov",
         meta: {
@@ -72,43 +82,8 @@ const routes = [
           parent: "disinsection",
           title: "Уничтожение муравьев",
         },
-        // component: () => import(""),
-      },
-      {
-        path: "unichtozhenie-os-i-shershnej",
-        name: "unichtozhenie-os-i-shershnej",
-        meta: {
-          parent: "disinsection",
-          title: "Уничтожение ос",
-        },
-        // component: () => import(""),
-      },
-      {
-        path: "unichtozhenie-mux",
-        name: "unichtozhenie-mux",
-        meta: {
-          parent: "disinsection",
-          title: "Уничтожение мух",
-        },
-        // component: () => import(""),
-      },
-      {
-        path: "unichtozhenie-moshek",
-        name: "unichtozhenie-moshek",
-        meta: {
-          parent: "disinsection",
-          title: "Уничтожение мошек",
-        },
-        // component: () => import(""),
-      },
-      {
-        path: "unichtozhenie-koroeda",
-        name: "unichtozhenie-koroeda",
-        meta: {
-          parent: "disinsection",
-          title: "Уничтожение короеда",
-        },
-        // component: () => import(""),
+        component: () =>
+          import("../views/disinsection/subViews/UnichtozhenieMuravjovView"),
       },
       {
         path: "unichtozhenie-mokric",
@@ -117,25 +92,39 @@ const routes = [
           parent: "disinsection",
           title: "Уничтожение мокриц",
         },
-        // component: () => import(""),
+        component: () =>
+          import("../views/disinsection/subViews/UnichtozhenieMokricView"),
       },
       {
-        path: "unichtozhenie-cheshujnic",
-        name: "unichtozhenie-cheshujnic",
+        path: "unichtozhenie-os-i-shershnej",
+        name: "unichtozhenie-os-i-shershnej",
         meta: {
           parent: "disinsection",
-          title: "Уничтожение чешуйниц",
+          title: "Уничтожение ос и шершней",
         },
-        // component: () => import(""),
+        component: () =>
+          import("../views/disinsection/subViews/UnichtozhenieOsShershnejView"),
+      },
+
+      {
+        path: "barery-ot-nasekomyh",
+        name: "barery-ot-nasekomyh",
+        meta: {
+          parent: "disinsection",
+          title: "Барьеры от насекомых",
+        },
+        component: () =>
+          import("../views/disinsection/subViews/BareryOtNasekomyhView"),
       },
       {
-        path: "gerbicidnaya-obrabotka",
-        name: "unichtozhenie-obrabotka",
+        name: "obrabotka-holodnym-tumanom",
+        path: "obrabotka-holodnym-tumanom",
         meta: {
           parent: "disinsection",
-          title: "Гербицидная обработка",
+          title: "Обработка холодным туманом",
         },
-        // component: () => import(""),
+        component: () =>
+          import("../views/disinsection/subViews/ObrabotkaHolodnymTumanomView"),
       },
     ],
   },

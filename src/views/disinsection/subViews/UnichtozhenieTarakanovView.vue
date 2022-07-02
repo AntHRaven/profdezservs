@@ -11,10 +11,8 @@ import MainView from "@/views/MainView";
 import UnichtozhenieTarakanov from "@/components/disinsection/subComponents/unichtozhenieTarakanov";
 export default {
   name: "UnichtozhenieTarakanovView",
-  components: {UnichtozhenieTarakanov, MainView}
-}
+  components: { UnichtozhenieTarakanov, MainView },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

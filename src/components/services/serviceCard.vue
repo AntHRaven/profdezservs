@@ -49,8 +49,8 @@ export default {
   methods: {
     toSubService(service) {
       this.$router.push("/" + service.meta.parent + "/" + service.path);
-    }
-  }
+    },
+  },
 };
 </script>
 

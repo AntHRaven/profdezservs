@@ -11,7 +11,7 @@ import Disinsection from "@/components/disinsection/disinsection";
 import MainView from "@/views/MainView";
 export default {
   name: "DisinsectionView",
-  components: {MainView,  Disinsection },
+  components: { MainView, Disinsection },
 
   mounted() {
     console.log(name);

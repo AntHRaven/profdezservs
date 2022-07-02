@@ -11,10 +11,8 @@ import MainView from "@/views/MainView";
 import UnichtozhenieKleshchej from "@/components/disinsection/subComponents/unichtozhenieKleshchej";
 export default {
   name: "UnichtozhenieKleshchejView",
-  components: {UnichtozhenieKleshchej, MainView}
-}
+  components: { UnichtozhenieKleshchej, MainView },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

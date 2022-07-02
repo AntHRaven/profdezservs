@@ -11,11 +11,8 @@ import UnichtozhenieBloh from "@/components/disinsection/subComponents/unichtozh
 import MainView from "@/views/MainView";
 export default {
   name: "UnichtozhenieBlohView",
-  components: {MainView, UnichtozhenieBloh}
-
-}
+  components: { MainView, UnichtozhenieBloh },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

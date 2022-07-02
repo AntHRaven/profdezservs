@@ -25,6 +25,10 @@ export default {
   width: 20vw;
 }
 
+p {
+  text-align: justify;
+}
+
 .notice {
   background: #f3f6f7;
   position: relative;

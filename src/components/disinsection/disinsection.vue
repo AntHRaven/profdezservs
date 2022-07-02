@@ -55,26 +55,26 @@
       </p>
     </div>
 
-<!--    <v-expansion-panels>-->
-<!--      <v-expansion-panel>-->
-<!--        <v-expansion-panel-header>-->
-<!--          ОБРАБОТКА ОТ КЛОПОВ, ТАРАКАНОВ, БЛОХ И ДРУГИХ НАСЕКОМЫХ В ПОМЕЩЕНИЯХ-->
-<!--        </v-expansion-panel-header>-->
-<!--        <v-expansion-panel-content>-->
-<!--          <v-data-table-->
-<!--            :headers="headers"-->
-<!--            :items="prices"-->
-<!--            item-key="name"-->
-<!--            sort-by="name"-->
-<!--            group-by="type"-->
-<!--            class="elevation-1"-->
-<!--            show-group-by-->
-<!--            hide-default-footer-->
-<!--            :items-per-page="20"-->
-<!--          ></v-data-table>-->
-<!--        </v-expansion-panel-content>-->
-<!--      </v-expansion-panel>-->
-<!--    </v-expansion-panels>-->
+    <!--    <v-expansion-panels>-->
+    <!--      <v-expansion-panel>-->
+    <!--        <v-expansion-panel-header>-->
+    <!--          ОБРАБОТКА ОТ КЛОПОВ, ТАРАКАНОВ, БЛОХ И ДРУГИХ НАСЕКОМЫХ В ПОМЕЩЕНИЯХ-->
+    <!--        </v-expansion-panel-header>-->
+    <!--        <v-expansion-panel-content>-->
+    <!--          <v-data-table-->
+    <!--            :headers="headers"-->
+    <!--            :items="prices"-->
+    <!--            item-key="name"-->
+    <!--            sort-by="name"-->
+    <!--            group-by="type"-->
+    <!--            class="elevation-1"-->
+    <!--            show-group-by-->
+    <!--            hide-default-footer-->
+    <!--            :items-per-page="20"-->
+    <!--          ></v-data-table>-->
+    <!--        </v-expansion-panel-content>-->
+    <!--      </v-expansion-panel>-->
+    <!--    </v-expansion-panels>-->
     <br />
     <br />
     <h3>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Список предоставляемых услуг</h2>
-    <br>
+    <br />
     <div class="d-flex flex-wrap">
       <div
         style="margin: 0 auto"
