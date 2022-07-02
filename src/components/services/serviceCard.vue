@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card max-width="365px" outlined class="mr-2 mb-2">
+    <v-card max-width="340px" outlined class="mr-2 mb-2">
       <v-img
         :src="service.meta.image"
         class="white--text align-end"
