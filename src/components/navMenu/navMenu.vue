@@ -76,6 +76,17 @@ export default {
       this.$router.push("" + link);
     },
   },
+
+  mounted() {
+    console.log("ROUTE",this.$route);
+    console.log(
+      this.visibleRoots.findIndex((item) => {
+        console.log("ITEM", item.path);
+        console.log("ROUTE", this.$route.path);
+        return item.path === this.$route.path;
+      })
+    );
+  },
 };
 </script>
 

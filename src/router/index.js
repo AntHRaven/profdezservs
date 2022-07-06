@@ -16,15 +16,15 @@ const routes = [
     hidden: true,
     component: () => import("../views/viewRouter"),
     children: [
-      {
-        path: "",
-        name: "disinsection",
-        meta: {
-          parent: "disinsection",
-          title: "Дезинсекция",
-        },
-        component: () => import("../views/disinsection/DisinsectionView"),
-      },
+      // {
+      //   path: "",
+      //   name: "disinsection",
+      //   meta: {
+      //     parent: "disinsection",
+      //     title: "Дезинсекция",
+      //   },
+      //   component: () => import("../views/disinsection/DisinsectionView"),
+      // },
       {
         path: "unichtozhenie-kleshchej",
         name: "unichtozhenie-kleshchej",
@@ -139,21 +139,35 @@ const routes = [
       image: require("@/assets/firstImage.jpg"),
     },
     hidden: true,
-    component: () => import("../views/disinsection/DisinsectionView"),
+    component: () => import("../views/viewRouter"),
     children: [
       {
-        path: "",
+        path: "unichtozhenie-myshej",
+        name: "unichtozhenie-myshej",
         meta: {
-          title: "",
+          parent: "deratization",
+          title: "Уничтожение мышей",
         },
-        // component: () => import(""),
+        component: () =>
+          import("../views/deratization/subViews/UnichtozhenieMyshejView"),
+      },
+
+      {
+        path: "unichtozhenie-krys",
+        name: "unichtozhenie-krys",
+        meta: {
+          parent: "deratization",
+          title: "Уничтожение крыс",
+        },
+        component: () =>
+          import("../views/deratization/subViews/UnichtozhenieKrysView"),
       },
     ],
   },
 
   {
     path: "/unichtozhenie-sadovyh-vreditelej",
-    name: "unichtozhenieSadovyhVreditelej",
+    name: "unichtozhenie-sadovyh-vreditelej",
     meta: {
       service: true,
       image: require("@/assets/firstImage.jpg"),
@@ -161,20 +175,39 @@ const routes = [
       title: "Уничтожение садовых вредителей",
     },
     hidden: true,
-    component: () => import("../views/disinsection/DisinsectionView"),
+    component: () => import("../views/viewRouter"),
     children: [
       {
-        path: "",
+        path: "unichtozhenie-krotov",
+        name: "unichtozhenie-krotov",
         meta: {
-          title: "",
+          parent: "unichtozhenie-sadovyh-vreditelej",
+          title: "Уничтожение кротов",
         },
+        component: () =>
+          import(
+            "../views/unichtozhenieSadovyhVreditelej/subViews/UnichtozhenieKrotovView"
+          ),
+      },
+
+      {
+        path: "unichtozhenie-zemleroek",
+        name: "unichtozhenie-zemleroek",
+        meta: {
+          parent: "unichtozhenie-sadovyh-vreditelej",
+          title: "Уничтожение землероек",
+        },
+        component: () =>
+          import(
+            "../views/unichtozhenieSadovyhVreditelej/subViews/UnichtozhenieZemleroekView"
+          ),
       },
     ],
   },
 
   {
     path: "/other-services",
-    name: "otherServices",
+    name: "other-services",
     meta: {
       service: true,
       image: require("@/assets/firstImage.jpg"),
@@ -182,13 +215,38 @@ const routes = [
       title: "Другие услуги",
     },
     hidden: true,
-    component: () => import("../views/disinsection/DisinsectionView"),
+    component: () => import("../views/viewRouter"),
     children: [
       {
-        path: "",
+        path: "dezinfekcija",
+        name: "dezinfekcija",
         meta: {
-          title: "",
+          parent: "other-services",
+          title: "Дезинфекция",
         },
+        component: () => import("../views/other/subViews/DezinfekcijaView"),
+      },
+
+      {
+        path: "unichtozhenie-zapahov",
+        name: "unichtozhenie-zapahov",
+        meta: {
+          parent: "other-services",
+          title: "Уничтожение запахов",
+        },
+        component: () =>
+          import("../views/other/subViews/UnichtozhenieZapahovView"),
+      },
+
+      {
+        path: "unichtozhenie-pleseni",
+        name: "unichtozhenie-pleseni",
+        meta: {
+          parent: "other-services",
+          title: "Уничтожение плесени",
+        },
+        component: () =>
+          import("../views/other/subViews/UnichtozheniePleseniView"),
       },
     ],
   },
@@ -199,32 +257,26 @@ const routes = [
     meta: {
       title: "Цены",
     },
-    component: () => import("../views/disinsection/DisinsectionView"),
-    children: [
-      {
-        path: "",
-        meta: {
-          title: "",
-        },
-      },
-    ],
+    component: () => import("../views/PricesView"),
   },
 
   {
     path: "/about-us",
     name: "about-us",
     meta: {
-      title: "О нас",
+      title: "О компании",
     },
-    component: () => import("../views/disinsection/DisinsectionView"),
-    children: [
-      {
-        path: "",
-        meta: {
-          title: "",
-        },
-      },
-    ],
+    component: () => import("../views/aboutUsView"),
+  },
+
+  {
+    path: "/",
+    name: "home",
+    hidden: true,
+    meta: {
+      title: "О компании",
+    },
+    component: () => import("../views/aboutUsView"),
   },
 
   {
@@ -233,7 +285,7 @@ const routes = [
     meta: {
       title: "Контакты",
     },
-    component: () => import("../views/disinsection/DisinsectionView"),
+    component: () => import("../views/ContactsView"),
     children: [
       {
         path: "",
@@ -252,6 +304,14 @@ const routes = [
       title: "Услуги",
     },
     component: () => import("../views/services/ListServicesView"),
+  },
+  {
+    path: "/stock",
+    name: "stock",
+    meta: {
+      title: "Акции",
+    },
+    component: () => import("../views/stockView"),
   },
 ];
 

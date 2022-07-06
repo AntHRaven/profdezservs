@@ -4,6 +4,7 @@ const state = {
 
 const actions = {
   setActiveTab(context, data) {
+    console.log(data)
     context.commit("setActiveTab", data);
   },
 };

@@ -14,9 +14,9 @@ import NavMenu from "@/components/navMenu/navMenu";
 export default {
   name: "App",
   components: { NavMenu },
-  data: () => ({
-    //
-  }),
+
+  mounted() {
+  }
 };
 </script>
 

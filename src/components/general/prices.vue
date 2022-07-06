@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Цены на обработку</h2>
+    <h2>{{title}}</h2>
     <v-simple-table>
       <template v-slot:default>
         <thead>
@@ -23,7 +23,15 @@
 <script>
 export default {
   name: "prices",
-  props: ["service"],
+  props: {
+    service: {
+      type: Array,
+    },
+    title: {
+      type: String,
+      default: "Цены на обработку",
+    }
+  },
 };
 </script>
 
