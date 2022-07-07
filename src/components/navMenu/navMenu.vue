@@ -9,7 +9,12 @@
       <v-spacer></v-spacer>
       <p>Номер телефона</p>
       <template v-slot:extension>
-        <v-tabs v-model="tab" fixed-tabs slider-color="white" class="d-none d-sm-flex justify-center">
+        <v-tabs
+          v-model="tab"
+          fixed-tabs
+          slider-color="white"
+          class="d-none d-sm-flex justify-center"
+        >
           <v-tab
             v-for="(item, index) in visibleRoots"
             :key="index"
@@ -48,6 +53,7 @@
 
                   <v-list>
                     <v-list-item
+                      @click="toSubService(subService)"
                       v-for="subService in service.children"
                       :key="subService"
                     >
@@ -107,16 +113,13 @@
 
             <v-list-item
               v-for="subService in service.children"
+              @click="toSubService(subService)"
               :key="subService"
               link
             >
               <v-list-item-title
                 v-text="subService.meta.title"
               ></v-list-item-title>
-
-              <v-list-item-icon>
-                <v-icon v-text="icon"></v-icon>
-              </v-list-item-icon>
             </v-list-item>
           </v-list-group>
         </v-list-group>
@@ -168,6 +171,10 @@ export default {
   methods: {
     setTab(link) {
       this.$router.push("" + link);
+    },
+
+    toSubService(service) {
+      this.$router.push("/" + service.meta.parent + "/" + service.path);
     },
   },
 
