@@ -1,7 +1,20 @@
 <template>
   <div>
     <h1>О компании</h1>
+    <v-img
+      :aspect-ratio="16 / 9"
+      height="350"
+      src="https://xn-----7kcamglvgef3bcdcac6akfge0ah1h1f.xn--p1ai/wp-content/uploads/2018/08/bg8.jpg"
+      class="white--text align-end"
+      gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+    >
+      <v-card-title>
+        <h2>
+          Дезинсекция, дезинфекция, дератизация <br> Москва и Московская обл.
+        </h2>
+      </v-card-title>
 
+    </v-img>
     <p>
       Добро пожаловать на сайт компании ПрофДезСервис - службы по уничтожению
       клопов, тараканов, муравьев, крыс и многих других синатропных насекомых и

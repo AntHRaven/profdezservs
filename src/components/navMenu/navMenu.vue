@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar color="cyan" dark app>
+    <v-app-bar color="indigo darken-3" dark app>
       <v-app-bar-nav-icon
         @click="drawer = true"
         class="d-flex d-sm-none"
