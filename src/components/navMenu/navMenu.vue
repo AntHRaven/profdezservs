@@ -9,35 +9,120 @@
       <v-spacer></v-spacer>
       <p>Номер телефона</p>
       <template v-slot:extension>
-        <v-tabs
-          v-model="tab"
-          align-with-title
-          class="d-none d-sm-flex justify-center"
-        >
-          <v-tabs-slider></v-tabs-slider>
-
+        <v-tabs v-model="tab" fixed-tabs slider-color="white" class="d-none d-sm-flex justify-center">
           <v-tab
-            @click="setTab(index, item.path)"
             v-for="(item, index) in visibleRoots"
             :key="index"
+            :to="item.path"
           >
             {{ item.meta.title }}
           </v-tab>
+
+          <v-menu offset-y>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                text
+                class="align-self-center mr-4"
+                v-bind="attrs"
+                v-on="on"
+              >
+                Услуги
+                <v-icon right> mdi-menu-down </v-icon>
+              </v-btn>
+            </template>
+
+            <v-list>
+              <v-list-item v-for="service in servicesMenu" :key="service">
+                <v-menu offset-x open-on-hover>
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                      text
+                      class="align-self-center mr-4"
+                      v-bind="attrs"
+                      v-on="on"
+                    >
+                      {{ service.meta.title }}
+                      <v-icon right> mdi-menu-down </v-icon>
+                    </v-btn>
+                  </template>
+
+                  <v-list>
+                    <v-list-item
+                      v-for="subService in service.children"
+                      :key="subService"
+                    >
+                      <v-list-item-title>
+                        {{ subService.meta.title }}
+                      </v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-list-item>
+            </v-list>
+          </v-menu>
         </v-tabs>
+        <!--        <v-tabs-->
+        <!--          v-model="tab"-->
+        <!--          align-with-title-->
+        <!--          class="d-none d-sm-flex justify-center"-->
+        <!--        >-->
+        <!--          <v-tabs-slider></v-tabs-slider>-->
+
+        <!--          <v-tab-->
+        <!--            @click="setTab(index, item.path)"-->
+        <!--            v-for="(item, index) in visibleRoots"-->
+        <!--            :key="index"-->
+        <!--          >-->
+        <!--            {{ item.meta.title }}-->
+        <!--          </v-tab>-->
+        <!--        </v-tabs>-->
       </template>
     </v-app-bar>
     <!-- Add a navigation bar -->
-    <v-navigation-drawer v-model="drawer" absolute temporary>
-      <v-list nav dense>
-        <v-list-item-group>
-          <v-list-item :key="index" v-for="(item, index) in visibleRoots">
-            <v-list-item-title @click="setTab(index, item.path)">
-              {{ item.meta.title }}
-            </v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
+    <v-navigation-drawer v-model="drawer" width="85vw" absolute temporary>
+      <v-list>
+        <v-list-item :key="index" v-for="(item, index) in visibleRoots">
+          <v-list-item-title @click="setTab(item.path)">{{
+            item.meta.title
+          }}</v-list-item-title>
+        </v-list-item>
+
+        <v-list-group :value="true">
+          <template v-slot:activator>
+            <v-list-item-title>Услуги</v-list-item-title>
+          </template>
+
+          <v-list-group
+            v-for="service in servicesMenu"
+            :key="service"
+            :value="true"
+            no-action
+            sub-group
+          >
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title>{{ service.meta.title }}</v-list-item-title>
+              </v-list-item-content>
+            </template>
+
+            <v-list-item
+              v-for="subService in service.children"
+              :key="subService"
+              link
+            >
+              <v-list-item-title
+                v-text="subService.meta.title"
+              ></v-list-item-title>
+
+              <v-list-item-icon>
+                <v-icon v-text="icon"></v-icon>
+              </v-list-item-icon>
+            </v-list-item>
+          </v-list-group>
+        </v-list-group>
       </v-list>
     </v-navigation-drawer>
+    asd
   </div>
 </template>
 
@@ -48,37 +133,46 @@ export default {
   name: "navMenu",
   data() {
     return {
+      tab: "about-us",
       drawer: false,
     };
   },
 
   computed: {
     ...mapGetters({
-      tab: "GETACTIVETAB",
+      // tab: "GETACTIVETAB",
       routes: "GETROUTES",
     }),
 
     visibleRoots: {
       get() {
-        return this.routes.filter((item) => !item.hidden);
+        return this.routes.filter(
+          (item) => !item.hidden && item.name !== "services"
+        );
       },
     },
 
-    tab: {
-      set(value) {
-        this.$store.dispatch("setActiveTab", value);
+    servicesMenu: {
+      get() {
+        return this.routes.filter((item) => item.meta.service);
       },
     },
+
+    // tab: {
+    //   set(value) {
+    //     this.$store.dispatch("setActiveTab", value);
+    //   },
+    // },
   },
 
   methods: {
-    setTab(index, link) {
+    setTab(link) {
       this.$router.push("" + link);
     },
   },
 
   mounted() {
-    console.log("ROUTE",this.$route);
+    console.log("ROUTE", this.$route);
     console.log(
       this.visibleRoots.findIndex((item) => {
         console.log("ITEM", item.path);

@@ -286,15 +286,6 @@ const routes = [
       title: "Контакты",
     },
     component: () => import("../views/ContactsView"),
-    children: [
-      {
-        path: "",
-        meta: {
-          title: "",
-        },
-        // component: () => import(""),
-      },
-    ],
   },
 
   {
