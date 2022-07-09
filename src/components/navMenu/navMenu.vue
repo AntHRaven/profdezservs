@@ -5,7 +5,15 @@
         @click="drawer = true"
         class="d-flex d-sm-none"
       ></v-app-bar-nav-icon>
-      <v-toolbar-title style="font-size: 30px">Профдезсервис</v-toolbar-title>
+      <v-toolbar-title style="font-size: 30px"
+        ><div>
+          Профдезсервис
+          <small style="font-size: 12px">
+            Городской центр санитарной дезенсекции
+          </small>
+        </div>
+      </v-toolbar-title>
+
       <v-spacer></v-spacer>
       <p>Номер телефона</p>
       <template v-slot:extension>
@@ -15,6 +23,32 @@
           slider-color="white"
           class="d-none d-sm-flex justify-center"
         >
+          <v-menu offset-y>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                text
+                class="align-self-center mr-4"
+                v-bind="attrs"
+                v-on="on"
+              >
+                О компании
+                <v-icon right> mdi-menu-down </v-icon>
+              </v-btn>
+            </template>
+
+            <v-list>
+              <v-list-item
+                v-for="item in aboutUs"
+                :key="item"
+                @click="setTab(item.path)"
+              >
+                <v-list-item-title>
+                  {{ item.meta.title }}
+                </v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+
           <v-tab
             v-for="(item, index) in visibleRoots"
             :key="index"
@@ -158,6 +192,12 @@ export default {
     servicesMenu: {
       get() {
         return this.routes.filter((item) => item.meta.service);
+      },
+    },
+
+    aboutUs: {
+      get() {
+        return this.routes.filter((item) => item.meta.aboutUs);
       },
     },
 

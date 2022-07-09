@@ -263,8 +263,21 @@ const routes = [
   {
     path: "/about-us",
     name: "about-us",
+    hidden: true,
     meta: {
+      aboutUs: true,
       title: "О компании",
+    },
+    component: () => import("../views/aboutUsView"),
+  },
+
+  {
+    path: "/certificates",
+    name: "certificates",
+    hidden: true,
+    meta: {
+      aboutUs: true,
+      title: "Сертифиакты",
     },
     component: () => import("../views/aboutUsView"),
   },
