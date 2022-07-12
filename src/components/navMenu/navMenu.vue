@@ -5,14 +5,12 @@
         @click="drawer = true"
         class="d-flex d-sm-none"
       ></v-app-bar-nav-icon>
-      <v-spacer class="d-none d-sm-flex"></v-spacer>
-      <v-toolbar-title style="font-size: 32px">
-        ПРОФДЕЗСЕРВИС
-        <small style="font-size: 12px">
-          Городской центр санитарной дезенсекции
-        </small>
+      <!--      <v-spacer class="d-none d-sm-flex"></v-spacer>-->
+      <v-toolbar-title style="font-size: 32px"> ПРОФДЕЗСЕРВИС </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-title class="d-none d-sm-flex" style="font-size: 32px">
+        Городской центр санитарной дезенсекции
       </v-toolbar-title>
-
       <v-spacer></v-spacer>
       <p>8 (495)003-21-32</p>
       <template v-slot:extension>
