@@ -57,33 +57,49 @@
 import Prices from "@/components/general/prices";
 export default {
   name: "dezinfekcija",
-  components: {Prices},
+  components: { Prices },
   data() {
     return {
       disinfection: [
         {
-          name: "Комната/моп",
-          price: "2000 руб",
-        },
-        {
           name: "1 к. кв.",
-          price: "2500 руб",
+          price: "2200 руб",
         },
         {
           name: "2 к. кв.",
-          price: "3000 руб",
+          price: "2500 руб",
         },
         {
           name: "3 к. кв.",
-          price: "3500 руб",
+          price: "300 руб",
         },
         {
           name: "4 к. кв.",
           price: "4000 руб",
         },
+        {
+          name: "5 к. кв.",
+          price: "4500 руб",
+        },
+        {
+          name: "6 к. кв.",
+          price: "4900 руб",
+        },
+        {
+          name: "7 к. кв.",
+          price: "5300 руб",
+        },
+        {
+          name: "8 к. кв.",
+          price: "5800 руб",
+        },
+        {
+          name: "Вагончик-бытовка",
+          price: "1000 руб",
+        },
       ],
-    }
-  }
+    };
+  },
 };
 </script>
 

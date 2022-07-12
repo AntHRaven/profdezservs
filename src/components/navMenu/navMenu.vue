@@ -5,17 +5,16 @@
         @click="drawer = true"
         class="d-flex d-sm-none"
       ></v-app-bar-nav-icon>
-      <v-toolbar-title style="font-size: 30px"
-        ><div>
-          Профдезсервис
-          <small style="font-size: 12px">
-            Городской центр санитарной дезенсекции
-          </small>
-        </div>
+      <v-spacer class="d-none d-sm-flex"></v-spacer>
+      <v-toolbar-title style="font-size: 32px">
+        ПРОФДЕЗСЕРВИС
+        <small style="font-size: 12px">
+          Городской центр санитарной дезенсекции
+        </small>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
-      <p>Номер телефона</p>
+      <p>8 (495)003-21-32</p>
       <template v-slot:extension>
         <v-tabs
           v-model="tab"

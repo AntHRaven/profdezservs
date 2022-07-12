@@ -279,7 +279,7 @@ const routes = [
       aboutUs: true,
       title: "Сертифиакты",
     },
-    component: () => import("../views/aboutUsView"),
+    component: () => import("../views/CertificatesView"),
   },
 
   {
