@@ -11,10 +11,8 @@ import MainView from "@/views/MainView";
 import Dezinfekcija from "@/components/other/subComponents/dezinfekcija";
 export default {
   name: "DezinfekcijaView",
-  components: {Dezinfekcija, MainView}
-}
+  components: { Dezinfekcija, MainView },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

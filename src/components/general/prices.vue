@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>{{title}}</h2>
+    <h2>{{ title }}</h2>
     <v-simple-table>
       <template v-slot:default>
         <thead>
@@ -30,7 +30,7 @@ export default {
     title: {
       type: String,
       default: "Цены на обработку",
-    }
+    },
   },
 };
 </script>

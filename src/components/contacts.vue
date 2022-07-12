@@ -3,7 +3,7 @@
     <h1>Контакты</h1>
     <v-icon large color="green darken-2"> mdi-map-marker </v-icon>
     Москва
-    <br>
+    <br />
     <v-icon large color="green darken-2"> mdi-phone </v-icon>
     8 (499) 380-73-29
     <div style="padding: 20px"></div>

@@ -8,10 +8,8 @@
 import Contacts from "@/components/contacts";
 export default {
   name: "ContactsView",
-  components: {Contacts}
-}
+  components: { Contacts },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

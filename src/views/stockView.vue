@@ -8,10 +8,8 @@
 import Stock from "@/components/stock";
 export default {
   name: "stockView",
-  components: {Stock}
-}
+  components: { Stock },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

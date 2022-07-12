@@ -8,10 +8,8 @@
 import AboutUs from "@/components/aboutUs";
 export default {
   name: "aboutUsView",
-  components: {AboutUs}
-}
+  components: { AboutUs },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -8,10 +8,8 @@
 import Certificates from "@/certificates";
 export default {
   name: "CertificatesView",
-  components: {Certificates}
-}
+  components: { Certificates },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
