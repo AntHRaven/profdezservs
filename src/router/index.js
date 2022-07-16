@@ -11,7 +11,7 @@ const routes = [
       service: true,
       image: require("@/assets/firstImage.jpg"),
       show: false,
-      title: "Уничтожение насекомых",
+      title: "Дезинсекция",
     },
     hidden: true,
     component: () => import("../views/viewRouter"),
@@ -133,7 +133,7 @@ const routes = [
     path: "/deratization",
     name: "deratization",
     meta: {
-      title: "Уничтожение грызунов",
+      title: "Дератизация",
       service: true,
       show: false,
       image: require("@/assets/firstImage.jpg"),

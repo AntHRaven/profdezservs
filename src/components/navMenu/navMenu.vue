@@ -1,15 +1,32 @@
 <template>
   <div>
-    <v-app-bar color="indigo darken-3" dark app>
+    <v-app-bar color="grey darken-4" dark app>
       <v-app-bar-nav-icon
         @click="drawer = true"
         class="d-flex d-sm-none"
       ></v-app-bar-nav-icon>
       <!--      <v-spacer class="d-none d-sm-flex"></v-spacer>-->
-      <v-toolbar-title style="font-size: 32px"> ПРОФДЕЗСЕРВИС </v-toolbar-title>
+      <v-toolbar-title style="font-size: 32px">
+        <v-row>
+          <v-col>
+            <router-link style="text-decoration: none" to="/">
+              <v-img max-width="45" :src="require('@/assets/logo.png')"></v-img>
+            </router-link>
+          </v-col>
+          <v-col>
+            <router-link
+              class="d-none d-sm-flex"
+              style="text-decoration: none; color: #212121"
+              to="/"
+            >
+              ПРОФДЕЗСЕРВИС
+            </router-link>
+          </v-col>
+        </v-row>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-title class="d-none d-sm-flex" style="font-size: 32px">
-        Городской центр санитарной дезенсекции
+      <v-toolbar-title class="d-none d-sm-flex" style="font-size: 24px">
+        Дезинсекция, дезинфекция, дератизация Москва и Московская обл
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <p>8 (495)003-21-32</p>
@@ -20,31 +37,11 @@
           slider-color="white"
           class="d-none d-sm-flex justify-center"
         >
-          <v-menu open-on-hover offset-y>
-            <template v-slot:activator="{ on, attrs }">
-              <v-btn
-                text
-                class="align-self-center mr-4"
-                v-bind="attrs"
-                v-on="on"
-              >
-                О компании
-                <v-icon right> mdi-menu-down </v-icon>
-              </v-btn>
-            </template>
-
-            <v-list>
-              <v-list-item
-                v-for="item in aboutUs"
-                :key="item"
-                @click="setTab(item.path)"
-              >
-                <v-list-item-title>
-                  {{ item.meta.title }}
-                </v-list-item-title>
-              </v-list-item>
-            </v-list>
-          </v-menu>
+          <drop-down-list title="О компании" :items="aboutUs"></drop-down-list>
+          <drop-down-list title="Дезенсекция" :items="disinsection"></drop-down-list>
+          <drop-down-list title="Дератизация" :items="deratization"></drop-down-list>
+          <drop-down-list title="Дезенфекция" :items="otherServices"></drop-down-list>
+          <drop-down-list title="Фумигация" :items="aboutUs"></drop-down-list>
 
           <v-tab
             v-for="(item, index) in visibleRoots"
@@ -53,50 +50,6 @@
           >
             {{ item.meta.title }}
           </v-tab>
-
-          <v-menu offset-y>
-            <template v-slot:activator="{ on, attrs }">
-              <v-btn
-                text
-                class="align-self-center mr-4"
-                v-bind="attrs"
-                v-on="on"
-              >
-                Услуги
-                <v-icon right> mdi-menu-down </v-icon>
-              </v-btn>
-            </template>
-
-            <v-list>
-              <v-list-item v-for="service in servicesMenu" :key="service">
-                <v-menu offset-x open-on-hover>
-                  <template v-slot:activator="{ on, attrs }">
-                    <v-btn
-                      text
-                      class="align-self-center mr-4"
-                      v-bind="attrs"
-                      v-on="on"
-                    >
-                      {{ service.meta.title }}
-                      <v-icon right> mdi-menu-down </v-icon>
-                    </v-btn>
-                  </template>
-
-                  <v-list>
-                    <v-list-item
-                      @click="toSubService(subService)"
-                      v-for="subService in service.children"
-                      :key="subService"
-                    >
-                      <v-list-item-title>
-                        {{ subService.meta.title }}
-                      </v-list-item-title>
-                    </v-list-item>
-                  </v-list>
-                </v-menu>
-              </v-list-item>
-            </v-list>
-          </v-menu>
         </v-tabs>
         <!--        <v-tabs-->
         <!--          v-model="tab"-->
@@ -162,9 +115,11 @@
 
 <script>
 import { mapGetters } from "vuex";
+import DropDownList from "@/components/navMenu/dropDownList";
 
 export default {
   name: "navMenu",
+  components: {DropDownList},
   data() {
     return {
       tab: "about-us",
@@ -195,6 +150,24 @@ export default {
     aboutUs: {
       get() {
         return this.routes.filter((item) => item.meta.aboutUs);
+      },
+    },
+
+    disinsection: {
+      get() {
+        return this.routes.filter((item) => item.name === "disinsection");
+      },
+    },
+
+    deratization: {
+      get() {
+        return this.routes.filter((item) => item.name === "deratization");
+      },
+    },
+
+    otherServices: {
+      get() {
+        return this.routes.filter((item) => item.name === "unichtozhenie-zapahov");
       },
     },
 

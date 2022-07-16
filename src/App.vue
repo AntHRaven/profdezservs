@@ -6,10 +6,10 @@
         <router-view />
       </v-container>
     </v-main>
-    <v-footer style="color: white" color="indigo darken-3" padless>
+    <v-footer style="color: white" color="grey darken-4" padless>
       <v-row justify="center" no-gutters>
         <div style="height: 48px">
-          <p style="top: 50%">ПрофеДезСервис ©2022</p>
+          <p style="top: 50%">ПрофДезСервис ©2022</p>
         </div>
       </v-row>
     </v-footer>
@@ -37,14 +37,14 @@ export default {
 
 <style>
 .mdi-menu {
-  background-color: #283693;
+  background-color: #212121;
   border-radius: 4px;
   padding: 5px 8px;
 }
 
 .v-toolbar__content {
   background-color: white !important;
-  color: #283693;
+  color: #212121;
 }
 
 .navigation {

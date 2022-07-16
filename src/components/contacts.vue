@@ -5,7 +5,10 @@
     Москва
     <br />
     <v-icon large color="green darken-2"> mdi-phone </v-icon>
-    8 (499) 380-73-29
+    8 (495)003-21-32
+    <br>
+    <v-icon large color="green darken-2"> mdi-email </v-icon>
+    profdez.servis@yandex.ru
     <div style="padding: 20px"></div>
   </div>
 </template>
