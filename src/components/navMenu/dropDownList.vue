@@ -8,7 +8,11 @@
     </template>
 
     <v-list>
-      <v-list-item v-for="item in items" :key="item" @click="setTab(item.path)">
+      <v-list-item
+        v-for="item in items[0].children"
+        :key="item"
+        @click="setTab(item.path)"
+      >
         <v-list-item-title>
           {{ item.meta.title }}
         </v-list-item-title>
@@ -18,6 +22,8 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex";
+
 export default {
   props: ["title", "items"],
   name: "dropDownList",
@@ -27,6 +33,16 @@ export default {
       this.$router.push("" + link);
     },
   },
+
+  computed: {
+    ...mapGetters({
+      routes: "GETROUTES",
+    })
+  },
+
+  mounted() {
+    console.log(this.items);
+  }
 };
 </script>
 

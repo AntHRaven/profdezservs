@@ -38,9 +38,18 @@
           class="d-none d-sm-flex justify-center"
         >
           <drop-down-list title="О компании" :items="aboutUs"></drop-down-list>
-          <drop-down-list title="Дезенсекция" :items="disinsection"></drop-down-list>
-          <drop-down-list title="Дератизация" :items="deratization"></drop-down-list>
-          <drop-down-list title="Дезенфекция" :items="otherServices"></drop-down-list>
+          <drop-down-list
+            title="Дезенсекция"
+            :items="disinsection"
+          ></drop-down-list>
+          <drop-down-list
+            title="Дератизация"
+            :items="deratization"
+          ></drop-down-list>
+          <drop-down-list
+            title="Дезенфекция"
+            :items="otherServices"
+          ></drop-down-list>
           <drop-down-list title="Фумигация" :items="aboutUs"></drop-down-list>
 
           <v-tab
@@ -51,21 +60,6 @@
             {{ item.meta.title }}
           </v-tab>
         </v-tabs>
-        <!--        <v-tabs-->
-        <!--          v-model="tab"-->
-        <!--          align-with-title-->
-        <!--          class="d-none d-sm-flex justify-center"-->
-        <!--        >-->
-        <!--          <v-tabs-slider></v-tabs-slider>-->
-
-        <!--          <v-tab-->
-        <!--            @click="setTab(index, item.path)"-->
-        <!--            v-for="(item, index) in visibleRoots"-->
-        <!--            :key="index"-->
-        <!--          >-->
-        <!--            {{ item.meta.title }}-->
-        <!--          </v-tab>-->
-        <!--        </v-tabs>-->
       </template>
     </v-app-bar>
     <!-- Add a navigation bar -->
@@ -77,36 +71,26 @@
           }}</v-list-item-title>
         </v-list-item>
 
-        <v-list-group :value="true">
-          <template v-slot:activator>
-            <v-list-item-title>Услуги</v-list-item-title>
-          </template>
-
-          <v-list-group
-            v-for="service in servicesMenu"
-            :key="service"
-            :value="true"
-            no-action
-            sub-group
-          >
-            <template v-slot:activator>
-              <v-list-item-content>
-                <v-list-item-title>{{ service.meta.title }}</v-list-item-title>
-              </v-list-item-content>
-            </template>
-
-            <v-list-item
-              v-for="subService in service.children"
-              @click="toSubService(subService)"
-              :key="subService"
-              link
-            >
-              <v-list-item-title
-                v-text="subService.meta.title"
-              ></v-list-item-title>
-            </v-list-item>
-          </v-list-group>
-        </v-list-group>
+        <drop-down-list-mobile
+          title="О компании"
+          :items="aboutUs"
+        ></drop-down-list-mobile>
+        <drop-down-list-mobile
+          title="Дезенсекция"
+          :items="disinsection"
+        ></drop-down-list-mobile>
+        <drop-down-list-mobile
+          title="Дератизация"
+          :items="deratization"
+        ></drop-down-list-mobile>
+        <drop-down-list-mobile
+          title="Дезенфекция"
+          :items="otherServices"
+        ></drop-down-list-mobile>
+        <drop-down-list-mobile
+          title="Фумигация"
+          :items="aboutUs"
+        ></drop-down-list-mobile>
       </v-list>
     </v-navigation-drawer>
     asd
@@ -116,10 +100,11 @@
 <script>
 import { mapGetters } from "vuex";
 import DropDownList from "@/components/navMenu/dropDownList";
+import DropDownListMobile from "@/components/navMenu/dropDownListMobile";
 
 export default {
   name: "navMenu",
-  components: {DropDownList},
+  components: { DropDownListMobile, DropDownList },
   data() {
     return {
       tab: "about-us",
@@ -167,7 +152,9 @@ export default {
 
     otherServices: {
       get() {
-        return this.routes.filter((item) => item.name === "unichtozhenie-zapahov");
+        return this.routes.filter(
+          (item) => item.name === "unichtozhenie-zapahov"
+        );
       },
     },
 
@@ -189,14 +176,7 @@ export default {
   },
 
   mounted() {
-    console.log("ROUTE", this.$route);
-    console.log(
-      this.visibleRoots.findIndex((item) => {
-        console.log("ITEM", item.path);
-        console.log("ROUTE", this.$route.path);
-        return item.path === this.$route.path;
-      })
-    );
+    console.log("ROUTE", this.servicesMenu);
   },
 };
 </script>
