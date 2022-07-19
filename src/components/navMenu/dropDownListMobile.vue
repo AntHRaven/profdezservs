@@ -6,12 +6,7 @@
       </v-list-item-content>
     </template>
 
-    <v-list-item
-      @click="setTab(item.path)"
-      v-for="(item, i) in items"
-      :key="i"
-      link
-    >
+    <v-list-item @click="setTab(item)" v-for="(item, i) in items" :key="i" link>
       <v-list-item-title v-text="item.meta.title"></v-list-item-title>
     </v-list-item>
   </v-list-group>
@@ -23,8 +18,13 @@ export default {
   props: ["items", "title"],
 
   methods: {
-    setTab(link) {
-      this.$router.push("" + link);
+    setTab(item) {
+      this.$router.push("" + item);
+      this.$router.push(
+        item.meta.parent
+          ? "/" + item.meta.parent + "/" + item.path
+          : "" + item.path
+      );
     },
 
     toSubService(service) {

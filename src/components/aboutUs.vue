@@ -67,12 +67,44 @@
     </p>
 
     <h4>Работаем ежедневно Пн.-Вс.: 9:00 – 20:00</h4>
+
+    <v-row>
+      <v-col
+        v-for="(image, i) in images"
+        :key="i"
+        class="d-flex child-flex"
+        cols="4"
+      >
+        <v-img :src="image" aspect-ratio="1" class="grey lighten-2"></v-img>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
 export default {
   name: "aboutUs",
+  data() {
+    return {
+      images: [
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.16.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.18.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.20.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.22.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.25.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.28.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.30.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.32.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.33.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.35.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.37.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.39.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.41.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.43.jpeg"),
+        require("@/assets/aboutUs/photo_2022-07-19 23.44.44.jpeg"),
+      ],
+    };
+  },
 };
 </script>
 

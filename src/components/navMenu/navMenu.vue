@@ -140,13 +140,13 @@ export default {
 
     disinsection: {
       get() {
-        return this.routes.filter((item) => item.name === "disinsection");
+        return this.routes.filter((item) => item.name === "disinsection")[0].children;
       },
     },
 
     deratization: {
       get() {
-        return this.routes.filter((item) => item.name === "deratization");
+        return this.routes.filter((item) => item.name === "deratization")[0].children;
       },
     },
 

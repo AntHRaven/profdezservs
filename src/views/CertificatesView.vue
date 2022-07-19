@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Certificates from "@/certificates";
+import Certificates from "@/components/certificates";
 export default {
   name: "CertificatesView",
   components: { Certificates },
