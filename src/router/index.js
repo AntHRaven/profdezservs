@@ -205,7 +205,7 @@ const routes = [
         name: "koronavirus",
         meta: {
           parent: "disinfection",
-          title: "Коронавирус(инфа)",
+          title: "Коронавирус",
         },
         component: () => import("../views/disinfection/KoronavirusView"),
       },
@@ -214,10 +214,9 @@ const routes = [
         name: "virusy-i-bakterii",
         meta: {
           parent: "disinfection",
-          title: "Вирусы и бактерии(инфа)",
+          title: "Вирусы и бактерии",
         },
-        component: () =>
-          import("../views/deratization/subViews/UnichtozhenieMyshejView"),
+        component: () => import("../views/disinfection/VirusesView"),
       },
       {
         path: "plesen",
