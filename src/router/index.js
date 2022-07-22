@@ -16,15 +16,6 @@ const routes = [
     hidden: true,
     component: () => import("../views/viewRouter"),
     children: [
-      // {
-      //   path: "",
-      //   name: "disinsection",
-      //   meta: {
-      //     parent: "disinsection",
-      //     title: "Дезинсекция",
-      //   },
-      //   component: () => import("../views/disinsection/DisinsectionView"),
-      // },
       {
         path: "unichtozhenie-kleshchej",
         name: "unichtozhenie-kleshchej",
@@ -71,6 +62,26 @@ const routes = [
         meta: {
           parent: "disinsection",
           title: "Уничтожение блох",
+        },
+        component: () =>
+          import("../views/disinsection/subViews/UnichtozhenieBlohView"),
+      },
+      {
+        path: "unichtozhenie-moli",
+        name: "unichtozhenie-moli",
+        meta: {
+          parent: "disinsection",
+          title: "Уничтожение моли(инфа)",
+        },
+        component: () =>
+          import("../views/disinsection/subViews/UnichtozhenieBlohView"),
+      },
+      {
+        path: "unichtozhenie-muh",
+        name: "unichtozhenie-muh",
+        meta: {
+          parent: "disinsection",
+          title: "Уничтожение мух(инфа)",
         },
         component: () =>
           import("../views/disinsection/subViews/UnichtozhenieBlohView"),
@@ -162,6 +173,117 @@ const routes = [
         component: () =>
           import("../views/deratization/subViews/UnichtozhenieKrysView"),
       },
+      {
+        path: "unichtozhenie-krotov",
+        name: "unichtozhenie-krotov",
+        meta: {
+          parent: "unichtozhenie-sadovyh-vreditelej",
+          title: "Уничтожение кротов",
+        },
+        component: () =>
+          import(
+            "../views/unichtozhenieSadovyhVreditelej/subViews/UnichtozhenieKrotovView"
+          ),
+      },
+    ],
+  },
+
+  {
+    path: "/disinfection",
+    name: "disinfection",
+    meta: {
+      title: "Дезинфекция",
+      service: true,
+      show: false,
+      image: require("@/assets/firstImage.jpg"),
+    },
+    hidden: true,
+    component: () => import("../views/viewRouter"),
+    children: [
+      {
+        path: "koronavirus",
+        name: "koronavirus",
+        meta: {
+          parent: "disinfection",
+          title: "Коронавирус(инфа)",
+        },
+        component: () => import("../views/disinfection/KoronavirusView"),
+      },
+      {
+        path: "virusy-i-bakterii",
+        name: "virusy-i-bakterii",
+        meta: {
+          parent: "disinfection",
+          title: "Вирусы и бактерии(инфа)",
+        },
+        component: () =>
+          import("../views/deratization/subViews/UnichtozhenieMyshejView"),
+      },
+      {
+        path: "plesen",
+        name: "plesen",
+        meta: {
+          parent: "disinfection",
+          title: "Плесень(инфа)",
+        },
+        component: () =>
+          import("../views/deratization/subViews/UnichtozhenieMyshejView"),
+      },
+      {
+        path: "gribok",
+        name: "gribok",
+        meta: {
+          parent: "disinfection",
+          title: "Грибок(инфа)",
+        },
+        component: () =>
+          import("../views/deratization/subViews/UnichtozhenieMyshejView"),
+      },
+      {
+        path: "dezodoracia",
+        name: "dezodoracia",
+        meta: {
+          parent: "disinfection",
+          title: "Дезодорация(инфа)",
+        },
+        component: () =>
+          import("../views/deratization/subViews/UnichtozhenieMyshejView"),
+      },
+      {
+        path: "demerkurizacia",
+        name: "demerkurizacia",
+        meta: {
+          parent: "disinfection",
+          title: "Демеркуризация(инфа)",
+        },
+        component: () =>
+          import("../views/deratization/subViews/UnichtozhenieMyshejView"),
+      },
+    ],
+  },
+
+  {
+    path: "/fumigation",
+    name: "fumigation",
+    meta: {
+      title: "Фумигация",
+      service: true,
+      show: false,
+      image: require("@/assets/firstImage.jpg"),
+    },
+    hidden: true,
+    component: () => import("../views/viewRouter"),
+    children: [
+      {
+        path: "fumigation-rooms",
+        name: "fumigation-rooms",
+        meta: {
+          parent: "fumigation",
+          title: "Фумигация помещений(инфа)",
+        },
+        component: () =>
+          import("../views/deratization/subViews/UnichtozhenieMyshejView"),
+      },
     ],
   },
 
@@ -177,19 +299,6 @@ const routes = [
     hidden: true,
     component: () => import("../views/viewRouter"),
     children: [
-      {
-        path: "unichtozhenie-krotov",
-        name: "unichtozhenie-krotov",
-        meta: {
-          parent: "unichtozhenie-sadovyh-vreditelej",
-          title: "Уничтожение кротов",
-        },
-        component: () =>
-          import(
-            "../views/unichtozhenieSadovyhVreditelej/subViews/UnichtozhenieKrotovView"
-          ),
-      },
-
       {
         path: "unichtozhenie-zemleroek",
         name: "unichtozhenie-zemleroek",

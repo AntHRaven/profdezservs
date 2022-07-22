@@ -1,5 +1,7 @@
 <template>
   <div>
+    Клопы+ Тараканы+ Блохи+ Муравьи+ Мокрицы+ Моль- Мухи- Клещи+ Осы+- Барьерная
+    защита+
     <v-app-bar color="grey darken-4" dark app>
       <v-app-bar-nav-icon
         @click="drawer = true"
@@ -25,7 +27,10 @@
         </v-row>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-title class="d-none d-sm-flex" style="font-size: 24px">
+      <v-toolbar-title
+        class="d-none d-sm-flex d-md-none d-lg-flex"
+        style="font-size: 24px"
+      >
         Дезинсекция, дезинфекция, дератизация Москва и Московская обл
       </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -47,10 +52,13 @@
             :items="deratization"
           ></drop-down-list>
           <drop-down-list
-            title="Дезенфекция"
-            :items="otherServices"
+            title="Дезинфекция"
+            :items="disinfection"
           ></drop-down-list>
-          <drop-down-list title="Фумигация" :items="aboutUs"></drop-down-list>
+          <drop-down-list
+            title="Фумигация"
+            :items="fumigation"
+          ></drop-down-list>
 
           <v-tab
             v-for="(item, index) in visibleRoots"
@@ -84,16 +92,15 @@
           :items="deratization"
         ></drop-down-list-mobile>
         <drop-down-list-mobile
-          title="Дезенфекция"
-          :items="otherServices"
+          title="Дезинфекция"
+          :items="disinfection"
         ></drop-down-list-mobile>
         <drop-down-list-mobile
           title="Фумигация"
-          :items="aboutUs"
+          :items="fumigation"
         ></drop-down-list-mobile>
       </v-list>
     </v-navigation-drawer>
-    asd
   </div>
 </template>
 
@@ -114,7 +121,6 @@ export default {
 
   computed: {
     ...mapGetters({
-      // tab: "GETACTIVETAB",
       routes: "GETROUTES",
     }),
 
@@ -140,13 +146,29 @@ export default {
 
     disinsection: {
       get() {
-        return this.routes.filter((item) => item.name === "disinsection")[0].children;
+        return this.routes.filter((item) => item.name === "disinsection")[0]
+          .children;
       },
     },
 
     deratization: {
       get() {
-        return this.routes.filter((item) => item.name === "deratization")[0].children;
+        return this.routes.filter((item) => item.name === "deratization")[0]
+          .children;
+      },
+    },
+
+    disinfection: {
+      get() {
+        return this.routes.filter((item) => item.name === "disinfection")[0]
+          .children;
+      },
+    },
+
+    fumigation: {
+      get() {
+        return this.routes.filter((item) => item.name === "fumigation")[0]
+          .children;
       },
     },
 

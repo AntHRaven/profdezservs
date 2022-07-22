@@ -19,7 +19,6 @@ export default {
 
   methods: {
     setTab(item) {
-      this.$router.push("" + item);
       this.$router.push(
         item.meta.parent
           ? "/" + item.meta.parent + "/" + item.path

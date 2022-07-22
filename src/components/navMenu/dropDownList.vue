@@ -8,7 +8,7 @@
     </template>
 
     <v-list>
-      <v-list-item v-for="item in items" :key="item" @click="setTab(item.path)">
+      <v-list-item v-for="item in items" :key="item" @click="setTab(item)">
         <v-list-item-title>
           {{ item.meta.title }}
         </v-list-item-title>
@@ -25,8 +25,12 @@ export default {
   name: "dropDownList",
 
   methods: {
-    setTab(link) {
-      this.$router.push("" + link);
+    setTab(item) {
+      this.$router.push(
+        item.meta.parent
+          ? "/" + item.meta.parent + "/" + item.path
+          : "" + item.path
+      );
     },
   },
 
