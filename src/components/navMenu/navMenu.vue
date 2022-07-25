@@ -36,6 +36,8 @@
       <v-spacer></v-spacer>
       <p>8 (495)003-21-32</p>
       <template v-slot:extension>
+        <h4 class="d-flex d-sm-none">
+          ПРОФДЕЗСЕРВИС</h4>
         <v-tabs
           v-model="tab"
           fixed-tabs

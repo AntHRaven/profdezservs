@@ -223,40 +223,27 @@ const routes = [
         name: "plesen",
         meta: {
           parent: "disinfection",
-          title: "Плесень(инфа)",
+          title: "Плесень и грибок",
         },
-        component: () =>
-          import("../views/deratization/subViews/UnichtozhenieMyshejView"),
-      },
-      {
-        path: "gribok",
-        name: "gribok",
-        meta: {
-          parent: "disinfection",
-          title: "Грибок(инфа)",
-        },
-        component: () =>
-          import("../views/deratization/subViews/UnichtozhenieMyshejView"),
+        component: () => import("../views/disinfection/PlesenView"),
       },
       {
         path: "dezodoracia",
         name: "dezodoracia",
         meta: {
           parent: "disinfection",
-          title: "Дезодорация(инфа)",
+          title: "Дезодорация",
         },
-        component: () =>
-          import("../views/deratization/subViews/UnichtozhenieMyshejView"),
+        component: () => import("../views/disinfection/DezodoraciaView"),
       },
       {
         path: "demerkurizacia",
         name: "demerkurizacia",
         meta: {
           parent: "disinfection",
-          title: "Демеркуризация(инфа)",
+          title: "Демеркуризация",
         },
-        component: () =>
-          import("../views/deratization/subViews/UnichtozhenieMyshejView"),
+        component: () => import("../views/disinfection/DemercurizationView"),
       },
     ],
   },
@@ -274,14 +261,13 @@ const routes = [
     component: () => import("../views/viewRouter"),
     children: [
       {
-        path: "fumigation-rooms",
-        name: "fumigation-rooms",
+        path: "fumigation",
+        name: "fumigation",
         meta: {
           parent: "fumigation",
-          title: "Фумигация помещений(инфа)",
+          title: "Фумигация помещений",
         },
-        component: () =>
-          import("../views/deratization/subViews/UnichtozhenieMyshejView"),
+        component: () => import("../views/fumigation/FumigationView"),
       },
     ],
   },

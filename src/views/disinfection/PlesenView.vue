@@ -1,18 +1,18 @@
 <template>
   <div>
     <main-view>
-      <koronavirus></koronavirus>
+      <plesen></plesen>
 
     </main-view>
   </div>
 </template>
 
 <script>
-import Koronavirus from "@/components/disinfection/koronavirus";
+import Plesen from "@/components/disinfection/plesen";
 import MainView from "@/views/MainView";
 export default {
-  name: "KoronavirusView",
-  components: {MainView, Koronavirus },
+  name: "PlesenView",
+  components: {MainView, Plesen },
 };
 </script>
 
