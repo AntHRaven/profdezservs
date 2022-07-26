@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Стоимость услуг</h1>
+    <h1>Цены на услуги</h1>
 
     <prices
       :service="disinsection"
