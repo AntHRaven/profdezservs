@@ -71,20 +71,20 @@ const routes = [
         name: "unichtozhenie-moli",
         meta: {
           parent: "disinsection",
-          title: "Уничтожение моли(инфа)",
+          title: "Уничтожение моли",
         },
         component: () =>
-          import("../views/disinsection/subViews/UnichtozhenieBlohView"),
+          import("../views/disinsection/subViews/UnichtozhenieMoliView"),
       },
       {
         path: "unichtozhenie-muh",
         name: "unichtozhenie-muh",
         meta: {
           parent: "disinsection",
-          title: "Уничтожение мух(инфа)",
+          title: "Уничтожение мух",
         },
         component: () =>
-          import("../views/disinsection/subViews/UnichtozhenieBlohView"),
+          import("../views/disinsection/subViews/UnichtozhenieMuhView"),
       },
       {
         path: "unichtozhenie-muravev",

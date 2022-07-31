@@ -13,7 +13,7 @@
     ></prices>
 
     <prices
-      :service="deratization"
+      :service="dАeratization"
       title="СТОИМОСТЬ УСЛУГ ПО ДЕРАТИЗАЦИИ ПОМЕЩЕНИЯ"
     ></prices>
 
