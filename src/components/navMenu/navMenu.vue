@@ -34,6 +34,8 @@
         Дезинсекция, дезинфекция, дератизация Москва и Московская обл
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <p class="d-none d-sm-flex">profdez.servis@yandex.ru</p>
+      <v-spacer></v-spacer>
       <p>8 (495)003-21-32</p>
       <template v-slot:extension>
         <h4 class="d-flex d-sm-none">
