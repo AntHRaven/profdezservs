@@ -38,6 +38,12 @@
     </ul>
 
     <h3>Мокрица</h3>
+    <v-img
+      style="float: right; margin: 10px"
+      max-width="300px"
+      max-height="200px"
+      :src="require('@/assets/servicePicrtutes/mokrica.jpeg')"
+    ></v-img>
     <p>
       Тело у мокриц овальной формы, сверху выпуклое. По бокам головы расположены
       глаза, имеются 14 ножек. Окрас от светло-серого до темных тонов коричного

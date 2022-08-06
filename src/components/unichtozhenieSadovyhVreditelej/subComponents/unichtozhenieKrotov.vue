@@ -26,6 +26,12 @@
     <p>На все в среднем уходит всего 40 минут.</p>
 
     <h3>Крот</h3>
+    <v-img
+      style="float: right; margin: 10px"
+      max-width="400px"
+      max-height="600px"
+      :src="image"
+    ></v-img>
 
     <p>
       Крот-это небольшое млекопитающее, которое входит в отряд
@@ -125,6 +131,7 @@ export default {
   components: { Prices },
   data() {
     return {
+      image: require("@/assets/servicePicrtutes/krot.jpeg"),
       prices: [
         {
           name: "до 10 соток",

@@ -25,7 +25,6 @@
 
     <!--ПК-->
     <v-list shaped class="d-none d-sm-flex">
-      <v-subheader>{{ $route.meta.title }}</v-subheader>
       <v-list-item-group v-model="selectedItem" color="primary">
         <v-list-item
           v-for="(item, i) in getChildForCurrentPage.children"

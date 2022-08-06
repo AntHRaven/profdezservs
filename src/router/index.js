@@ -177,7 +177,7 @@ const routes = [
         path: "unichtozhenie-krotov",
         name: "unichtozhenie-krotov",
         meta: {
-          parent: "unichtozhenie-sadovyh-vreditelej",
+          parent: "deratization",
           title: "Уничтожение кротов",
         },
         component: () =>

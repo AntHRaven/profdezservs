@@ -18,7 +18,11 @@
           <v-col>
             <router-link
               class="d-none d-sm-flex"
-              style="text-decoration: none; color: #212121"
+              style="
+                text-decoration: none;
+                color: #212121;
+                text-shadow: 2px 2px #a8a8a8;
+              "
               to="/"
             >
               ПРОФДЕЗСЕРВИС
@@ -38,8 +42,9 @@
       <v-spacer></v-spacer>
       <p>8 (495)003-21-32</p>
       <template v-slot:extension>
-        <h4 class="d-flex d-sm-none">
-          ПРОФДЕЗСЕРВИС</h4>
+        <h4 style="text-shadow: 2px 2px red" class="d-flex d-sm-none">
+          ПРОФДЕЗСЕРВИС
+        </h4>
         <v-tabs
           v-model="tab"
           fixed-tabs

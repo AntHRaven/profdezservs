@@ -38,7 +38,12 @@
     </ul>
 
     <h3>Как выглядят муравьи</h3>
-
+    <v-img
+        style="float: right; margin: 10px"
+        max-width="300px"
+        max-height="200px"
+        :src="require('@/assets/servicePicrtutes/muravei.jpeg')"
+    ></v-img>
     <p>
       В теле муравья выделяются три основных составляющих: голова и соединённые
       между собой тонкой талией грудь и брюшко. На груди у него шесть тонких

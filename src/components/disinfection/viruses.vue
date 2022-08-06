@@ -10,6 +10,12 @@
       ВИЧ, плесени и грибков рода Кандида и Трихофитон, а также еще сотни
       ротавирусов, энтеровирусов.
     </p>
+
+    <v-img
+        style=" margin: 10px"
+        max-height="500px"
+        :src="require('@/assets/servicePicrtutes/virus.jpg')"
+    ></v-img>
     <prices :service="prices"></prices>
     <prices :service="pricesSquare"></prices>
     <p>

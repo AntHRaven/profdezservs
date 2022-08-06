@@ -37,7 +37,12 @@
     </ul>
 
     <h3>Блоха</h3>
-
+    <v-img
+        style="float: right; margin: 10px"
+        max-width="300px"
+        max-height="200px"
+        :src="require('@/assets/servicePicrtutes/bloha.jpeg')"
+    ></v-img>
     <p>
       Имеются множество видов блох, которые мало чем отличаются между собой.
       Тело блохи разделяется на три части: голова, тело (сплюснутое с боков,

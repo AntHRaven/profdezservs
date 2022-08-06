@@ -11,7 +11,12 @@
       безопасными препаратами, вещи и предметы интерьера останутся в целости и
       сохранности. Препарат без запаха и цвета.
     </p>
-
+    <v-img
+        style="float: right; margin: 10px"
+        max-width="300px"
+        max-height="200px"
+        :src="require('@/assets/servicePicrtutes/mol.jpeg')"
+    ></v-img>
     <h3>Чем опасна моль?</h3>
 
     <p>
