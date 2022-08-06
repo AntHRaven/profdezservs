@@ -12,9 +12,9 @@
     </p>
 
     <v-img
-        style=" margin: 10px"
-        max-height="500px"
-        :src="require('@/assets/servicePicrtutes/virus.jpg')"
+      style="margin: 10px"
+      max-height="500px"
+      :src="require('@/assets/servicePicrtutes/virus.jpg')"
     ></v-img>
     <prices :service="prices"></prices>
     <prices :service="pricesSquare"></prices>

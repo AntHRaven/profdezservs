@@ -39,10 +39,10 @@
       <li>саркофагидами</li>
     </ul>
     <v-img
-        style="float: right; margin: 10px"
-        max-width="300px"
-        max-height="200px"
-        :src="require('@/assets/servicePicrtutes/muha.jpeg')"
+      style="float: right; margin: 10px"
+      max-width="300px"
+      max-height="200px"
+      :src="require('@/assets/servicePicrtutes/muha.jpeg')"
     ></v-img>
     <p>
       Комнатная разновидность ведет дневной образ жизни. Эти насекомые переносят

@@ -2,7 +2,6 @@
   <div>
     <main-view>
       <plesen></plesen>
-
     </main-view>
   </div>
 </template>
@@ -12,7 +11,7 @@ import Plesen from "@/components/disinfection/plesen";
 import MainView from "@/views/MainView";
 export default {
   name: "PlesenView",
-  components: {MainView, Plesen },
+  components: { MainView, Plesen },
 };
 </script>
 

@@ -4,10 +4,10 @@
 
     <h3>ЧТО ТАКОЕ ФУМИГАЦИЯ И ДЛЯ ЧЕГО ОНА ДЕЛАЕТСЯ</h3>
     <v-img
-        style=" margin: 10px"
-        max-height="500px"
-        max-width="1000px"
-        :src="require('@/assets/servicePicrtutes/fumigation.jpeg')"
+      style="margin: 10px"
+      max-height="500px"
+      max-width="1000px"
+      :src="require('@/assets/servicePicrtutes/fumigation.jpeg')"
     ></v-img>
     <p>
       Фумигация представляет собой процесс уничтожения грызунов, насекомых и

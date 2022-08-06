@@ -7,9 +7,25 @@
       </v-container>
     </v-main>
     <v-footer style="color: white" color="grey darken-4" padless>
-      <v-row justify="center" no-gutters>
+      <v-row
+        style="max-width: 80vw; margin: 0 auto"
+        justify="center"
+        no-gutters
+      >
+        <div>
+          <p>График работ:</p>
+          <p>Пн.-Вс.: 9:00 – 20:00</p>
+        </div>
+        <v-spacer></v-spacer>
         <div style="height: 48px">
           <p style="top: 50%">ПрофДезСервис ©2022</p>
+          <p></p>
+        </div>
+        <v-spacer></v-spacer>
+
+        <div>
+          <p>profdez.servis@yandex.ru</p>
+          <p>8 (495)003-21-32</p>
         </div>
       </v-row>
     </v-footer>

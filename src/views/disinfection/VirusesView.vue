@@ -2,7 +2,6 @@
   <div>
     <main-view>
       <viruses></viruses>
-
     </main-view>
   </div>
 </template>
@@ -12,7 +11,7 @@ import Viruses from "@/components/disinfection/viruses";
 import MainView from "@/views/MainView";
 export default {
   name: "VirusesView",
-  components: {MainView, Viruses },
+  components: { MainView, Viruses },
 };
 </script>
 

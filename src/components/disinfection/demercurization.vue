@@ -8,10 +8,10 @@
       специальных веществ — демеркуризаторов.
     </p>
     <v-img
-        style="float: right; margin: 10px"
-        max-width="300px"
-        max-height="200px"
-        :src="require('@/assets/servicePicrtutes/gradusnik.jpg')"
+      style="float: right; margin: 10px"
+      max-width="300px"
+      max-height="200px"
+      :src="require('@/assets/servicePicrtutes/gradusnik.jpg')"
     ></v-img>
     <p>
       В обычной жизни современный человек чаще всего обращается со ртутью в виде

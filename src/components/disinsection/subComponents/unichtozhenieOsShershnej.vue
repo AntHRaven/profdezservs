@@ -16,10 +16,10 @@
 
     <h3>В чем различие шершня с осой</h3>
     <v-img
-        style="float: right; margin: 10px"
-        max-width="300px"
-        max-height="200px"
-        :src="require('@/assets/servicePicrtutes/osa.jpeg')"
+      style="float: right; margin: 10px"
+      max-width="300px"
+      max-height="200px"
+      :src="require('@/assets/servicePicrtutes/osa.jpeg')"
     ></v-img>
     <p>
       Шершень отличается от осы большим размером тела, длинна его достигает 3.5

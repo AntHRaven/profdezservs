@@ -11,7 +11,7 @@ import UnichtozhenieMoli from "@/components/disinsection/subComponents/unichtozh
 import MainView from "@/views/MainView";
 export default {
   name: "UnichtozhenieMoliView",
-  components: {MainView, UnichtozhenieMoli },
+  components: { MainView, UnichtozhenieMoli },
 };
 </script>
 

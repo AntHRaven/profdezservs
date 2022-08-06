@@ -16,10 +16,10 @@
     </p>
 
     <v-img
-        style="float: right; margin: 10px"
-        max-width="300px"
-        max-height="200px"
-        :src="require('@/assets/servicePicrtutes/koronavirus.jpg')"
+      style="float: right; margin: 10px"
+      max-width="300px"
+      max-height="200px"
+      :src="require('@/assets/servicePicrtutes/koronavirus.jpg')"
     ></v-img>
 
     <p>

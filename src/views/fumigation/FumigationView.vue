@@ -11,10 +11,8 @@ import Fumigation from "@/components/fumigation/fumigation";
 import MainView from "@/views/MainView";
 export default {
   name: "FumigationView",
-  components: {MainView, Fumigation}
-}
+  components: { MainView, Fumigation },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

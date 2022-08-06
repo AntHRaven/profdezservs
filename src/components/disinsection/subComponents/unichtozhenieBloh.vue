@@ -38,10 +38,10 @@
 
     <h3>Блоха</h3>
     <v-img
-        style="float: right; margin: 10px"
-        max-width="300px"
-        max-height="200px"
-        :src="require('@/assets/servicePicrtutes/bloha.jpeg')"
+      style="float: right; margin: 10px"
+      max-width="300px"
+      max-height="200px"
+      :src="require('@/assets/servicePicrtutes/bloha.jpeg')"
     ></v-img>
     <p>
       Имеются множество видов блох, которые мало чем отличаются между собой.
