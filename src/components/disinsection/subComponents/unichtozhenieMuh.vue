@@ -19,6 +19,8 @@
       надолго забыть о назойливых насекомых.
     </p>
 
+    <prices :service="prices"></prices>
+
     <h4>Опасность от мух и их виды</h4>
 
     <p>
@@ -119,8 +121,42 @@
 </template>
 
 <script>
+import Prices from "@/components/general/prices";
 export default {
   name: "unichtozhenieMuh",
+  components: {Prices},
+  data() {
+    return {
+      prices: [
+        {
+          name: "1-комнатная квартира",
+          price: "от 1700 руб",
+        },
+        {
+          name: "2-комнатная квартира",
+          price: "от 2400 руб",
+        },
+        {
+          name: "3-комнатная квартира",
+          price: "от 2800 руб",
+        },
+        {
+          name: "4-комнатная квартира",
+          price: "от 4500 руб",
+        },
+        {
+          name: "5-комнатная квартира",
+          price: "от 3900+400 послед. руб",
+        },
+        {
+          name: "Вагончик-бытовка",
+          price: "от 1500 руб",
+        },
+      ],
+
+    }
+  }
+
 };
 </script>
 

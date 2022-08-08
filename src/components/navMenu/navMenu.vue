@@ -42,7 +42,10 @@
       <v-spacer></v-spacer>
       <p>8 (495)003-21-32</p>
       <template v-slot:extension>
-        <h4 style="text-shadow: 2px 2px red" class="d-flex d-sm-none">
+        <h4
+          style="color: white; text-shadow: 2px 2px #4c4c4c"
+          class="d-flex d-sm-none"
+        >
           ПРОФДЕЗСЕРВИС
         </h4>
         <v-tabs

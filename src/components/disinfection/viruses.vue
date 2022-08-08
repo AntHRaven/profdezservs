@@ -14,6 +14,7 @@
     <v-img
       style="margin: 10px"
       max-height="500px"
+      max-width="70vw"
       :src="require('@/assets/servicePicrtutes/virus.jpg')"
     ></v-img>
     <prices :service="prices"></prices>

@@ -22,7 +22,12 @@
     </p>
 
     <h3>Демеркуризация дома</h3>
-
+    <v-img
+      style="float: right; margin: 10px"
+      max-width="300px"
+      max-height="200px"
+      :src="require('@/assets/servicePicrtutes/rtut.jpg')"
+    ></v-img>
     <p>
       Ртуть — это тяжёлый металл бело-серебристого цвета. Она относится к
       веществам первого класса опасности. При комнатной температуре ртуть
@@ -39,6 +44,13 @@
       влажную уборку с применением хлорсодержащих средств, а также проветривать
       помещение.
     </p>
+
+    <v-img
+      style="float: left; margin: 10px"
+      max-width="300px"
+      max-height="200px"
+      :src="require('@/assets/servicePicrtutes/rtut2.jpeg')"
+    ></v-img>
 
     <h3>Стоимость обработки и утилизация:</h3>
     <p>1.к -3500 р</p>

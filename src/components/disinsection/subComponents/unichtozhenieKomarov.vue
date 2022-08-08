@@ -19,7 +19,12 @@
     <prices :service="prices"></prices>
 
     <h3>Как быстро очистить помещение от комаров:</h3>
-
+    <v-img
+      style="float: right"
+      max-width="200px"
+      max-height="400px"
+      :src="require('@/assets/servicePicrtutes/komar.jpeg')"
+    ></v-img>
     <ul>
       <li>Оставляйте заявку на нашем сайте или по телефону;</li>
       <li>

@@ -37,8 +37,15 @@
       доверьте борьбу с грибком профессионалам!
     </p>
 
-    <p>Существует два основных метода уничтожения грибка в квартире</p>
+    <prices :service="prices"></prices>
 
+    <p>Существует два основных метода уничтожения грибка в квартире</p>
+    <v-img
+      style="margin: 10px; float: right"
+      max-width="200px"
+      max-height="400px"
+      :src="require('@/assets/servicePicrtutes/plesen1.jpeg')"
+    ></v-img>
     <ul>
       <li>
         <p>Генераторы холодного тумана (технология ULV орошения).</p>
@@ -79,7 +86,12 @@
     </p>
 
     <h4>ОСНОВНЫЕ ПРИЧИНЫ ПОЯВЛЕНИЯ ГРИБКА</h4>
-
+    <v-img
+      style="margin: 10px; float: left"
+      max-width="200px"
+      max-height="400px"
+      :src="require('@/assets/servicePicrtutes/plesen2.jpeg')"
+    ></v-img>
     <p>
       Влажность выше 70%. В закрытом помещении, где есть доступ к воде, такая
       влажность является нормой. Вместе с тем именно это является причиной
@@ -96,7 +108,12 @@
       Пар от горячей воды и тепло от змеевика – идеальный тандем для развития
       плесневого грибка.
     </p>
-
+    <v-img
+      style="margin: 10px; float: right"
+      max-width="200px"
+      max-height="400px"
+      :src="require('@/assets/servicePicrtutes/plesen3.jpeg')"
+    ></v-img>
     <p>
       Щели в стенах, штукатурке, между плинтусами – хорошее место для скопления
       капель пара и впоследствии – развития плесени.
@@ -122,7 +139,12 @@
       мимо. Действовать нужно немедленно – это плесень, и размножаться она будет
       очень быстро.
     </p>
-
+    <v-img
+        style="margin: 10px; float: left"
+        max-width="200px"
+        max-height="400px"
+        :src="require('@/assets/servicePicrtutes/plesen4.jpeg')"
+    ></v-img>
     <p>
       Одним из самых известных и действенных методов в борьбе с плесенью
       является 9% уксус.
@@ -206,8 +228,36 @@
 </template>
 
 <script>
+import Prices from "@/components/general/prices";
 export default {
   name: "plesen",
+  components: {Prices},
+  data() {
+    return {
+      prices: [
+        {
+          name: "1-комнатная квартира",
+          price: "от 3000 руб",
+        },
+        {
+          name: "2-комнатная квартира",
+          price: "от 3500 руб",
+        },
+        {
+          name: "3-комнатная квартира",
+          price: "от 4000 руб",
+        },
+        {
+          name: "4-комнатная квартира",
+          price: "55 руб за м²",
+        },
+        {
+          name: "Зачистка",
+          price: "от 3000 руб за 3м²",
+        },
+      ],
+    };
+  },
 };
 </script>
 

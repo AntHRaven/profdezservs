@@ -7,7 +7,12 @@
       <li>дезодорация с помощью генератора сухого тумана;</li>
       <li>озонирование.</li>
     </ul>
-
+    <v-img
+      style="float: right; margin: 10px"
+      max-width="300px"
+      max-height="200px"
+      :src="require('@/assets/servicePicrtutes/dezedoration1.jpeg')"
+    ></v-img>
     <p>
       Дезадорация – уничтожит запахи с помощью химических реактивов, которые
       разлагают основу неприятно пахнущих молекул.
@@ -44,7 +49,12 @@
       <li>Запахи табака и алкоголя, в том числе в автомобилях</li>
       <li>Дезодорация перед продажей квартиры</li>
     </ul>
-
+    <v-img
+      style="float: right; margin: 10px"
+      max-width="300px"
+      max-height="200px"
+      :src="require('@/assets/servicePicrtutes/dezedoration2.jpeg')"
+    ></v-img>
     <prices :service="prices"></prices>
   </div>
 </template>

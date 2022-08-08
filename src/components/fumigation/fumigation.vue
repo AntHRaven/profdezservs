@@ -6,7 +6,7 @@
     <v-img
       style="margin: 10px"
       max-height="500px"
-      max-width="1000px"
+      max-width="70vw"
       :src="require('@/assets/servicePicrtutes/fumigation.jpeg')"
     ></v-img>
     <p>
