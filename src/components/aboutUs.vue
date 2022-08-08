@@ -4,7 +4,7 @@
     <v-img
       :aspect-ratio="16 / 9"
       height="350"
-      :src="require('@/assets/mainImage.jpg')"
+      :src="require('@/assets/main.jpg')"
       class="white--text align-end"
       gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
     >
