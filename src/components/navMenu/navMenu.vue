@@ -83,7 +83,7 @@
       </template>
     </v-app-bar>
     <!-- Add a navigation bar -->
-    <v-navigation-drawer v-model="drawer" width="85vw" absolute temporary>
+    <v-navigation-drawer v-model="drawer" width="85vw" fixed>
       <v-list>
         <v-list-item :key="index" v-for="(item, index) in visibleRoots">
           <v-list-item-title @click="setTab(item.path)">{{
